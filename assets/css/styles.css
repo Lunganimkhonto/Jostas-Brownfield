@@ -1,25 +1,4 @@
-/* =========================
-   DESIGN SYSTEM
-========================= */
-:root {
-    --color-bg: #f8f7f5;
-    --color-surface: #ffffff;
-
-    --color-text: #1f2933;
-    --color-muted: #6b7280;
-
-    --color-primary: #b97652;
-    --color-primary-dark: #8a4e32;
-
-    --color-border: #e5e7eb;
-
-    --radius: 8px;
-    --transition: 0.25s ease;
-}
-
-/* =========================
-   BASE
-========================= */
+/* 
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--color-bg);

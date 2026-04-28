@@ -185,3 +185,21 @@ body {
     color: var(--color-text);
     border: 1px solid var(--color-text);
 }
+
+.card-icon i,
+.social-btn i {
+    display: inline-block;
+    line-height: 1;
+    font-size: 1rem;
+    color: inherit;
+}
+
+.card-icon i {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900;
+}
+
+.social-btn i {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400;
+}

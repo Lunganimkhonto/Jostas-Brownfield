@@ -1,211 +1,25 @@
-/* 
+:root {
+    --color-bg: #0a0a0f;
+    --color-surface: #11111a;
+    --color-primary: #00f5ff;
+    --color-primary-dark: #00c2cc;
+    --color-text: #f5f7ff;
+    --color-muted: #9aa4bf;
+    --color-border: rgba(255, 255, 255, 0.08);
+
+    --radius: 18px;
+    --transition: all 0.3s ease;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.6;
-} 
-
-/* Sections */
-.section {
-    padding: 80px 0;
 }
 
 /* =========================
-   TYPOGRAPHY
-========================= */
-.display-3 {
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-.display-6 {
-    font-size: 2.2rem;
-    font-weight: 600;
-}
-
-.text-secondary {
-    color: var(--color-muted) !important;
-}
-
-/* =========================
-   NAV / LOGO
-========================= */
-.jostas-logo {
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-.jostas-logo span {
-    font-size: 0.8rem;
-    color: var(--color-muted);
-}
-
-/* =========================
-   HERO
-========================= */
-.hero-section {
-    background-color: var(--color-primary);
-    color: white;
-    min-height: 520px;
-    display: flex;
-    align-items: center;
-}
-
-.hero-text-wrapper h1 {
-    font-size: 3.5rem;
-    font-weight: 600;
-    max-width: 500px;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-.cta-button-custom {
-    background-color: var(--color-primary-dark);
-    color: white;
-    padding: 12px 24px;
-    border-radius: var(--radius);
-    border: none;
-    font-weight: 500;
-    transition: var(--transition);
-    display: inline-block;
-    text-decoration: none;
-}
-
-.cta-button-custom:hover {
-    opacity: 0.9;
-}
-
-/* =========================
-   CARDS (SERVICES)
-========================= */
-.service-card {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    padding: 24px;
-    text-align: center;
-    transition: var(--transition);
-}
-
-.service-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-}
-
-.card-title {
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-/* Icons */
-.card-icon {
-    width: 42px;
-    height: 42px;
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.05);
-
-    font-size: 18px;
-    color: var(--color-primary);
-
-    transition: var(--transition);
-}
-
-.service-card:hover .card-icon {
-    background-color: var(--color-primary);
-    color: white;
-}
-
-/* =========================
-   PORTFOLIO
-========================= */
-.portfolio-image-container {
-    overflow: hidden;
-    border-radius: var(--radius);
-}
-
-.portfolio-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* =========================
-   DIVIDER
-========================= */
-.section-divider {
-    height: 1px;
-    background: var(--color-border);
-    margin: 60px 0;
-    width: 60px;
-}
-
-/* =========================
-   FORMS
-========================= */
-.form-control,
-.form-select {
-    border-radius: var(--radius);
-    border: 1px solid var(--color-border);
-}
-
-/* =========================
-   SOCIALS
-========================= */
-.social-links {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-}
-
-.social-btn {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background-color: var(--color-text);
-    color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: var(--transition);
-}
-
-.social-btn:hover {
-    background-color: transparent;
-    color: var(--color-text);
-    border: 1px solid var(--color-text);
-}
-
-.card-icon i,
-.social-btn i {
-    display: inline-block;
-    line-height: 1;
-    font-size: 1rem;
-    color: inherit;
-}
-
-.card-icon i {
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900;
-}
-
-.social-btn i {
-    font-family: "Font Awesome 6 Brands" !important;
-    font-weight: 400;
-}
-
-/* =========================
-   SAAS LAYOUT SYSTEM
+LAYOUT
 ========================= */
 .container {
     max-width: 1200px;
@@ -217,6 +31,19 @@ body {
 
 .section-sm {
     padding: 72px 0;
+}
+
+/* =========================
+TYPOGRAPHY
+========================= */
+.display-6 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.text-secondary {
+    color: var(--color-muted) !important;
 }
 
 .section-title {
@@ -235,11 +62,41 @@ body {
 }
 
 /* =========================
-   HERO (SAAS)
+NAVBAR
+========================= */
+.navbar {
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.jostas-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text) !important;
+}
+
+.jostas-logo span {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--color-muted);
+}
+
+.nav-link {
+    color: var(--color-muted) !important;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--color-primary) !important;
+}
+
+/* =========================
+HERO
 ========================= */
 .hero-section {
     padding: 120px 0 80px;
-    min-height: auto;
 }
 
 .hero-text-wrapper h1 {
@@ -247,6 +104,7 @@ body {
     line-height: 1.05;
     letter-spacing: -1.5px;
     max-width: 620px;
+    font-weight: 700;
 }
 
 .hero-text-wrapper p {
@@ -262,6 +120,25 @@ body {
     flex-wrap: wrap;
 }
 
+/* =========================
+BUTTONS
+========================= */
+.cta-button-custom {
+    background: var(--color-primary);
+    color: #000;
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 0 24px rgba(0, 245, 255, 0.25);
+}
+
+.cta-button-custom:hover {
+    background: var(--color-primary-dark);
+    color: #000;
+}
+
 .secondary-btn {
     color: var(--color-text);
     text-decoration: none;
@@ -275,7 +152,7 @@ body {
 }
 
 /* =========================
-   TRUST BAR
+TRUST BAR
 ========================= */
 .trust-bar {
     border-top: 1px solid var(--color-border);
@@ -291,7 +168,52 @@ body {
 }
 
 /* =========================
-   METRICS
+SERVICE CARDS
+========================= */
+.service-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 28px;
+    text-align: center;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 245, 255, 0.35);
+    box-shadow: 0 0 24px rgba(0, 245, 255, 0.08);
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: rgba(0, 245, 255, 0.08);
+    color: var(--color-primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    transition: var(--transition);
+}
+
+.service-card:hover .card-icon {
+    background: var(--color-primary);
+    color: #000;
+}
+
+/* =========================
+METRICS
 ========================= */
 .metrics-section {
     background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.02));
@@ -306,6 +228,7 @@ body {
     font-size: 2.5rem;
     color: var(--color-primary);
     margin-bottom: 8px;
+    font-weight: 700;
 }
 
 .metric-card p {
@@ -314,34 +237,32 @@ body {
 }
 
 /* =========================
-   FEATURE GRID
+PORTFOLIO
 ========================= */
-.feature-card {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
+.portfolio-image-container {
+    overflow: hidden;
     border-radius: var(--radius);
-    padding: 32px;
+    border: 1px solid var(--color-border);
+}
+
+.portfolio-image-container img {
+    width: 100%;
     height: 100%;
-    transition: var(--transition);
-}
-
-.feature-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(0, 245, 255, 0.25);
-}
-
-.feature-card h4 {
-    margin: 16px 0 12px;
-    font-size: 1.15rem;
-}
-
-.feature-card p {
-    color: var(--color-muted);
-    margin: 0;
+    object-fit: cover;
 }
 
 /* =========================
-   CTA CLOSE
+DIVIDER
+========================= */
+.section-divider {
+    height: 1px;
+    background: var(--color-border);
+    margin: 40px 0;
+    width: 60px;
+}
+
+/* =========================
+CTA
 ========================= */
 .cta-section {
     text-align: center;
@@ -352,7 +273,7 @@ body {
     max-width: 860px;
     margin: 0 auto;
     padding: 56px;
-    border-radius: 20px;
+    border-radius: 24px;
     background: linear-gradient(135deg, rgba(0, 245, 255, 0.06), rgba(139, 92, 246, 0.06));
     border: 1px solid var(--color-border);
 }
@@ -360,10 +281,64 @@ body {
 .cta-box h2 {
     font-size: 2.5rem;
     margin-bottom: 16px;
+    font-weight: 700;
 }
 
 .cta-box p {
     color: var(--color-muted);
     max-width: 620px;
     margin: 0 auto 28px;
+}
+
+/* =========================
+SOCIALS
+========================= */
+.social-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.social-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--color-text);
+    color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: var(--transition);
+}
+
+.social-btn:hover {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+}
+
+/* =========================
+FOOTER
+========================= */
+footer {
+    border-top: 1px solid var(--color-border);
+}
+
+/* =========================
+MOBILE
+========================= */
+@media (max-width: 991px) {
+    .hero-text-wrapper h1 {
+        font-size: 2.8rem;
+    }
+
+    .display-6 {
+        font-size: 2rem;
+    }
+
+    .cta-box {
+        padding: 36px 24px;
+    }
 }
